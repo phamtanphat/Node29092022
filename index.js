@@ -62,13 +62,33 @@
 
 // 6: Function Class
 
-function Person(name, age) {
-    this.name = name;
-    this.age = age
-    this.info = function () {
-        console.log(this.name)
-    }
-}
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age
+//     this.info = function () {
+//         console.log(this.name)
+//     }
+// }
 
-let teo = new Person("Teo", 10)
-teo.info()
+// let teo = new Person("Teo", 10)
+// teo.info()
+
+// 7: Bat dong bo
+
+let message = ""
+
+handle()
+.then(function(value){
+    console.log(value)
+})
+.catch(function(error){
+    console.log(`Error ${error}`)
+})
+
+function handle() {
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+            reject("loi")
+        }, 2000)
+    })
+}
