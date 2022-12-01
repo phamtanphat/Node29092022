@@ -77,18 +77,21 @@
 
 let message = ""
 
-handle()
-.then(function(value){
-    console.log(value)
-})
-.catch(function(error){
-    console.log(`Error ${error}`)
-})
+execute()
+
+async function execute() {
+    try {
+        let value = await handle()
+        console.log(`Giá trị ${value}`)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 function handle() {
     return new Promise(function(resolve, reject){
         setTimeout(function(){
-            reject("loi")
+            resolve("xin chao")
         }, 2000)
     })
 }
