@@ -43,12 +43,12 @@
 // print("a")
 
 // 5: Array
-let array = []
+// let array = []
 
 // Thêm
-array.push("Teo")
-array.push("Ti")
-array.push("Tun")
+// array.push("Teo")
+// array.push("Ti")
+// array.push("Tun")
 // Thêm ở đầu
 // array.unshift("Phat")
 // Thêm ở giữa
@@ -56,6 +56,19 @@ array.push("Tun")
 // Xoá
 // array.pop()
 // Xoá ở giữa
-array.splice(1, 1)
+// array.splice(1, 1)
 
-console.log(array)
+// console.log(array)
+
+// 6: Function Class
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age
+    this.info = function () {
+        console.log(this.name)
+    }
+}
+
+let teo = new Person("Teo", 10)
+teo.info()
